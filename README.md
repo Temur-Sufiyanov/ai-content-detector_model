@@ -1,17 +1,28 @@
 AI Content Detector Model 
 
 A lightweight and fast DistilBERT-based AI Content Detector for classifying text as Human-written or AI-generated.
+
 This repository contains the fine-tuned .pt model, tokenizer configuration, and example usage code for easy integration with FastAPI, Django, Flask, or any Python backend.
+
 Features
   DistilBERT architecture → small, fast, high accuracy
+  
   model format → easy to load in PyTorch
+  
   Optimized for API deployment (FastAPI-ready)
+  
   Supports text classification (AI vs Human)
+  
   Includes example inference script
+  
   Lightweight (good for CPU and low-RAM servers)
+  
 Installation:
+
   pip install torch transformers
+  
 Load the Model: 
+
       import torch
     from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
     
@@ -37,19 +48,33 @@ Load the Model:
     
     print(predict_text("This is a sample text."))
 Training Overview
+
   Base model: distilbert-base-uncased
+  
   Trained on a combination of: 
+  
   Custom dataset
+  
   HuggingFace AI/Human datasets  
+  
   Preprocessed Kaggle datasets
+  
 Output labels:
+
   0 = Human
+  
   1 = AI-generated
+  
 Use Cases
+
   Detecting AI-generated essays  
+  
   Verifying authenticity of student assignments
+
   Checking website/blog content originality
+  
   API integrations for moderation systems
+  
   Research & NLP experiments
 
 Feel free to open issues or request improvements!
